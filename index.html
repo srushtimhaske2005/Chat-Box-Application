@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💬 Funky ChatBox</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+
+<h2 class="title">💬 Funky ChatBox</h2>
+
+<div class="container">
+
+  <!-- Online Users Side Panel -->
+  <div id="users">
+    <b>Online Users</b>
+    <hr>
+  </div>
+
+  <div class="main">
+    <!-- Chat Box -->
+    <div id="chat"></div>
+
+    <!-- Message Input -->
+    <div class="input-area">
+      <textarea id="msg" rows="2" placeholder="Type a message..."></textarea>
+      <button id="send-btn">Send</button>
+    </div>
+
+    <!-- Emoji Bar -->
+    <div class="emoji-bar">
+      <span class="emoji">😊</span>
+      <span class="emoji">❤️</span>
+      <span class="emoji">🔥</span>
+      <span class="emoji">👍</span>
+      <span class="emoji">🎉</span>
+      <span class="emoji">😎</span>
+      <span class="emoji">😉</span>
+      <span class="emoji">👏</span>
+      <span class="emoji">🤔</span>
+      <span class="emoji">⭐</span>
+    </div>
+
+    <!-- Delete Chat Button -->
+    <button class="delete-btn" id="delete-btn">🗑 Delete Chat</button>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
